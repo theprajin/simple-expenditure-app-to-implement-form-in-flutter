@@ -63,7 +63,10 @@ class _SimpleExpenditureState extends State<SimpleExpenditure> {
           child: ListView(
             children: [
               Center(
-                child: Text(message),
+                child: Text(
+                  message,
+                  style: const TextStyle(fontSize: 20),
+                ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 20),
@@ -139,11 +142,14 @@ class _SimpleExpenditureState extends State<SimpleExpenditure> {
                   ],
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  _saveForm();
-                },
-                child: const Text('Calculate'),
+              Container(
+                margin: const EdgeInsets.only(top: 20.0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    _saveForm();
+                  },
+                  child: const Text('Calculate'),
+                ),
               ),
             ],
           ),
