@@ -24,6 +24,7 @@ class _SimpleExpenditureState extends State<SimpleExpenditure> {
     super.dispose();
   }
 
+  //calculates profit or loss
   double calculations() {
     return _netSalary! - _expenses!;
   }
